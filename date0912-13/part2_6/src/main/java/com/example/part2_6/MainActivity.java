@@ -2,6 +2,7 @@ package com.example.part2_6;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -16,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     CheckBox repeatCheckview;
     CheckBox vibrateCheckView;
     Switch switchView;
+    float initX;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,5 +62,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else if(buttonView == switchView){
             showToast("switch is" + isChecked);
         }
+    }
+    public boolean onTouchEvent(MotionEvent event){
+        if(event.getAction() == MotionEvent.ACTION_DOWN){
+            initX=event.getRawX();
+        }else if(event.getAction()==MotionEvent.ACTION_UP){
+
+            float diffx = initX-event.getRawX();
+            if (diffx > 30) {
+                showToast("왼쪽으로 화면을 밀었습니다.");
+            } else if (diffx < -30) {
+                showToast("오른쪽으로 화면을 밀었습니다.");
+            }
+
+        }
+        return true;
     }
 }
