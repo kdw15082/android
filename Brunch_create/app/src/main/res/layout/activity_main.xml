@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/pic_close"
+        style="@style/Space"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/icon_close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="글쓰기"
+        app:layout_constraintBottom_toBottomOf="@id/pic_close"
+        app:layout_constraintLeft_toRightOf="@+id/pic_close"
+        app:layout_constraintRight_toLeftOf="@+id/pic_ok"
+        app:layout_constraintTop_toTopOf="@+id/pic_close" />
+
+    <ImageView
+        android:id="@+id/pic_ok"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/icon_ok"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#D3D0D0"
+        app:layout_constraintLeft_toLeftOf="@+id/pic_close"
+        app:layout_constraintRight_toRightOf="@id/pic_ok"
+        app:layout_constraintTop_toBottomOf="@+id/pic_ok"
+        ></View>
+
+    <EditText
+        android:id="@+id/Edit1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:hint="제목"
+        android:inputType="text"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintLeft_toLeftOf="@+id/pic_close"
+        app:layout_constraintRight_toLeftOf="@id/layer"
+        app:layout_constraintTop_toBottomOf="@+id/view1" />
+
+    <ImageView
+        style="@style/Space"
+        android:id="@+id/layer"
+        android:src="@drawable/icon_layer"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintRight_toRightOf="@id/pic_ok"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#D3D0D0"
+        app:layout_constraintLeft_toLeftOf="@+id/pic_close"
+        app:layout_constraintRight_toRightOf="@id/pic_ok"
+        app:layout_constraintTop_toBottomOf="@+id/layer"
+        ></View>
+
+    <EditText
+        android:id="@+id/Edit2"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        android:hint="소제목"
+        android:inputType="text"
+        android:paddingLeft="5dp"
+        app:layout_constraintLeft_toLeftOf="@+id/pic_close"
+        app:layout_constraintRight_toRightOf="@id/pic_ok"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#D3D0D0"
+        app:layout_constraintLeft_toLeftOf="@+id/pic_close"
+        app:layout_constraintRight_toRightOf="@id/pic_ok"
+        app:layout_constraintTop_toBottomOf="@+id/Edit2"
+        ></View>
+
+    <EditText
+        android:id="@+id/Edit3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:hint="내용을 입력하세요"
+        android:paddingLeft="5dp"
+        android:gravity="top"
+        app:layout_constraintLeft_toLeftOf="@+id/pic_close"
+        app:layout_constraintRight_toRightOf="@id/pic_ok"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintBottom_toTopOf="@+id/view4"/>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#D3D0D0"
+        app:layout_constraintLeft_toLeftOf="@+id/pic_close"
+        app:layout_constraintRight_toRightOf="@id/pic_ok"
+        app:layout_constraintBottom_toTopOf="@+id/pic_photo"
+        ></View>
+
+    <ImageView
+        android:id="@+id/pic_photo"
+        style="@style/Space"
+        android:src="@drawable/icon_photo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/pic_close"
+        />
+
+
+    <ImageView
+        android:id="@+id/pic_eng"
+        style="@style/Space"
+        android:src="@drawable/icon_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/pic_photo"
+        app:layout_constraintTop_toTopOf="@id/view4"/>
+
+    <ImageView
+        android:id="@+id/pic_align"
+        style="@style/Space"
+        android:src="@drawable/icon_align"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/pic_eng"
+        app:layout_constraintTop_toTopOf="@id/view4"/>
+
+</android.support.constraint.ConstraintLayout>
