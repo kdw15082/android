@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+    <LinearLayout
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_file"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditText
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:id="@+id/content"
+        android:scrollbars="vertical"
+        android:hint="내용을 입력하세요"
+        android:layout_weight="1"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/btn"
+        android:text="저장"/>
+
+</LinearLayout>
